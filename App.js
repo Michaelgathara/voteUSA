@@ -3,9 +3,9 @@ import { Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 
-import CanidateScreen from './screens/Canidates'
-import TopicScreen from './screens/Topics'
-import VoteScreen from './screens/Vote'
+import CanidateScreen from './Canidates'
+import TopicScreen from './Topics'
+import VoteScreen from './Vote'
 
 const TabNavigator = createBottomTabNavigator({
   Canidates: { screen: CanidateScreen,
@@ -41,8 +41,8 @@ const TabNavigator = createBottomTabNavigator({
     tabBarVisible: true
   },
   tabBarOptions: {
-    activeTintColor: 'dodgerblue',
-    inactiveTintColor: 'black'
+    activeTintColor: 'crimson',
+    inactiveTintColor: 'dodgerblue'
   }
 });
 
