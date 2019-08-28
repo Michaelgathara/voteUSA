@@ -1,13 +1,14 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, WebView } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 class VoteScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Vote</Text>
-      </View>
+      <WebView
+        source={{uri: 'https://www.allsides.com/topics/guns'}}
+        style={{marginTop: 20}}
+      />
     );
   }
 }
