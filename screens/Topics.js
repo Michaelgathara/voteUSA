@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
+
 class TopicScreen extends React.Component {
   render() {
     return (
