@@ -16,8 +16,7 @@ import TopicList from './TopicsList'
               
           </Header>
           <Content contentContainerStyle={styles.content} >  
-         <TopicList/>
-         
+         <TopicList/>  
           </Content>
       </Container>
   )
