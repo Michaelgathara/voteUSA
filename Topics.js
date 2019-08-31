@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import { Platform, TouchableOpacity, Image , View, StyleSheet } from 'react-native';
+import { Platform, ScrollView, TouchableOpacity, Image , View, StyleSheet } from 'react-native';
 import {Container, Header, Body, CheckBox, Title, Card, CardItem,
 Left, Right, Icon, Content, Thumbnail, Grid, Col, Text, Button} from 'native-base';
-import TopicList from './TopicsList'
+import TopicsList from './TopicsList';
 
- class TopicScreen extends React.Component {
+class TopicScreen extends React.Component {
   render() {
     return(
       <Container style={styles.container}>
@@ -16,7 +16,9 @@ import TopicList from './TopicsList'
               
           </Header>
           <Content contentContainerStyle={styles.content} >  
-         <TopicList/>  
+         <ScrollView contentContainerStyle={styles.contentContainer}>
+         <TopicsList/>
+        </ScrollView>
           </Content>
       </Container>
   )
@@ -38,6 +40,6 @@ const styles = StyleSheet.create({
       display: "flex",
       flex: 1,
       justifyContent: "center",
-      padding: 15
+      padding: 0
   }
 });

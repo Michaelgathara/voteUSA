@@ -18,7 +18,7 @@ const TabNavigator = createBottomTabNavigator({
   },
   Topics:  { screen: TopicScreen,
     navigationOptions: {
-      tabBarLabel: 'TOPICS',
+      tabBarLabel: 'Topics',
       tabBarIcon: ({tintColor}) => (
         <Icon name="ios-list" color={tintColor} size={24} />
       )
