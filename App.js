@@ -1,12 +1,44 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {Root} from "native-base";
+import {Font, AppLoading} from "expo";
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 
 import CanidateScreen from './Canidates'
 import TopicScreen from './Topics'
 import VoteScreen from './Vote'
-
+class AppFontLoader extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {loading: true};
+  }
+  async componentWillMount() {
+    try {
+      await Expo.Font.loadAsync({
+        Roboto: require("native-base/Fonts/Roboto.ttf"),
+        Roboto_medium: require("native-base/Fonts/Robot_medium.ttf")
+      });
+      this.setState({ loading: false });
+    } catch (error) {
+      console.log('Error loading icon fonts', error);
+    }
+  }
+  render() {
+    if(this.state.loading) {
+      return (
+        <Root>
+          <AppLoading />
+        </Root>
+      );
+    }
+    return (
+      <Root>
+        <TabNavigator />
+      </Root>
+    )
+  }
+};
 const TabNavigator = createBottomTabNavigator({
   Canidates: { screen: CanidateScreen,
     navigationOptions: {
@@ -16,6 +48,7 @@ const TabNavigator = createBottomTabNavigator({
       )
     }
   },
+  //Let's do the topics later. We need to figure out the candiates page first.
   Topics:  { screen: TopicScreen,
     navigationOptions: {
       tabBarLabel: 'Topics',
