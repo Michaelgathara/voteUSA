@@ -16,8 +16,8 @@ class AppFontLoader extends React.Component {
   async componentWillMount() {
     try {
       await Expo.Font.loadAsync({
-        Roboto: require("native-base/Fonts/Roboto.ttf"),
-        Roboto_medium: require("native-base/Fonts/Robot_medium.ttf")
+        Roboto: require("./assets/Fonts/Roboto.ttf"),
+        Roboto_medium: require("./assets/Fonts/Robot_medium.ttf")
       });
       this.setState({ loading: false });
     } catch (error) {
