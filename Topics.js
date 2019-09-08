@@ -21,7 +21,7 @@ class TopicScreen extends React.Component {
         </ScrollView>
           </Content>
       </Container>
-  )
+  );
  }
 
 }

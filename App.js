@@ -16,8 +16,8 @@ class AppFontLoader extends React.Component {
   async componentWillMount() {
     try {
       await Expo.Font.loadAsync({
-        Roboto: require("./assets/Fonts/Roboto.ttf"),
-        Roboto_medium: require("./assets/Fonts/Robot_medium.ttf")
+        Roboto: require("./assets/Fonts/Roboto.ttf"), //assets\Fonts\Roboto_medium.ttfassets\Fonts\Roboto.ttf
+        Roboto_medium: require("./assets/Fonts/Roboto_medium.ttf") //assets\Fonts\Roboto_medium.ttf
       });
       this.setState({ loading: false });
     } catch (error) {
@@ -39,6 +39,7 @@ class AppFontLoader extends React.Component {
     )
   }
 };
+
 const TabNavigator = createBottomTabNavigator({
   Canidates: { screen: CanidateScreen,
     navigationOptions: {
