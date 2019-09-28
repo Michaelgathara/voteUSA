@@ -20,9 +20,9 @@ const TabNavigator = createBottomTabNavigator({
   },
   News: { screen: NewsScreen,
     navigationOptions: {
-      tabBarLabel: 'Canidates',
+      tabBarLabel: 'News',
       tabBarIcon: ({tintColor}) => (
-        <Icon name="ios-contact" color={tintColor} size={24} />
+        <Icon name="ios-list" color={tintColor} size={24} />
       )
     }
   },
@@ -30,7 +30,7 @@ const TabNavigator = createBottomTabNavigator({
     navigationOptions: {
       tabBarLabel: 'Topics',
       tabBarIcon: ({tintColor}) => (
-        <Icon name="ios-list" color={tintColor} size={24} />
+        <Icon name="ios-search" color={tintColor} size={24} />
       )
     }
   },
@@ -45,7 +45,7 @@ const TabNavigator = createBottomTabNavigator({
   },
 {
   initialRouteName : 'Vote',
-  order: ['Canidates', 'News', 'Topics', 'Vote'],
+  order: ['Canidates', 'Topics', 'News', 'Vote'],
 
   navigationOptions: {
     tabBarVisible: true

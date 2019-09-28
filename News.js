@@ -1,24 +1,48 @@
-import React, {Component} from 'react';
-import { Platform, TouchableOpacity, Image , StyleSheet, StatusBar } from 'react-native';
-import {Container, Header, Body, CheckBox, Text, View, Title, Card, CardItem,Left, Right, Icon, Content, Thumbnail, Grid, Col, Button} from 'native-base';
+import React, { Component } from "react";
+import {
+    View,
+    Text,
+    StyleSheet,
+    SafeAreaView,
+    TextInput,
+    Platform,
+    StatusBar,
+    ScrollView,
+    Image,
+    Dimensions
+} from "react-native";
 
- class NewsScreen extends React.Component {
-  render() {
-    return(
-      <Container style={styles.container}>
-          <Header style={styles.header}>
-              
-              <Body style={{flex:1}}>
-                  <Title>News</Title>
-              </Body>
-              
-          </Header>
-          <Content contentContainerStyle={styles.content} >  
-          </Content>
-      </Container>
-  )
- }
+const { height, width } = Dimensions.get('window')
 
+class NewsScreen extends Component {
+
+    componentWillMount() {
+        this.startHeaderHeight = 80
+        if (Platform.OS == 'android') {
+            this.startHeaderHeight = 100 + StatusBar.currentHeight
+        }
+    }
+
+    render() {
+        return (
+            <SafeAreaView style={{ flex: 1 }}>
+                    <ScrollView
+                        scrollEventThrottle={16}
+                    >
+                        <View style={{ flex: 1, backgroundColor: 'white', paddingTop: 20, justifyContent: "center" }}>
+                            <Text style={{ fontSize: 32, fontWeight: '800', paddingHorizontal: 20, color:'blue' }}>
+                                News
+                            </Text>
+                            <Text style={{ fontSize: 20, fontWeight: '300', paddingHorizontal: 20, color:'red' }}>
+                                Get the latest news on each canidate.</Text>
+                        </View>
+                        <View>
+                            
+                        </View>
+                </ScrollView>
+            </SafeAreaView>
+        );
+    }
 }
 
 export default NewsScreen;
