@@ -6,10 +6,19 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import CanidateScreen from './Canidates'
 import TopicScreen from './Topics'
 import VoteScreen from './Vote'
+import NewsScreen from './News'
 
 
 const TabNavigator = createBottomTabNavigator({
   Canidates: { screen: CanidateScreen,
+    navigationOptions: {
+      tabBarLabel: 'Canidates',
+      tabBarIcon: ({tintColor}) => (
+        <Icon name="ios-contact" color={tintColor} size={24} />
+      )
+    }
+  },
+  News: { screen: NewsScreen,
     navigationOptions: {
       tabBarLabel: 'Canidates',
       tabBarIcon: ({tintColor}) => (
@@ -36,7 +45,7 @@ const TabNavigator = createBottomTabNavigator({
   },
 {
   initialRouteName : 'Vote',
-  order: ['Canidates', 'Topics', 'Vote'],
+  order: ['Canidates', 'News', 'Topics', 'Vote'],
 
   navigationOptions: {
     tabBarVisible: true
