@@ -1,8 +1,6 @@
 {
-<<<<<<< HEAD
   "name": "voteUSA",
-  "displayName": "voteUSA"
-=======
+  "displayName": "voteUSA",
   "expo": {
     "name": "voteUSA",
     "slug": "voteUSA",
@@ -31,5 +29,4 @@
       "supportsTablet": true
     }
   }
->>>>>>> 70a97049986ca99b6538f4e3caa4ce2369d69b44
 }

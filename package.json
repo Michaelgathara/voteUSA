@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "voteUSA",
   "version": "0.0.1",
   "private": true,
@@ -26,8 +25,7 @@
   },
   "jest": {
     "preset": "react-native"
-  }
-=======
+  },
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -53,5 +51,4 @@
     "babel-preset-expo": "^7.0.0"
   },
   "private": true
->>>>>>> 70a97049986ca99b6538f4e3caa4ce2369d69b44
 }
